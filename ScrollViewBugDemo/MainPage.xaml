@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ScrollViewBugDemo.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ScrollView>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="24" />
+
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.05*" />
+                <ColumnDefinition Width="0.45*" />
+                <ColumnDefinition Width="0.45*" />
+                <ColumnDefinition Width="0.05*" />
+            </Grid.ColumnDefinitions>
+
+            <StackLayout
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="4">
+
+                <Image
+                    Aspect="AspectFit"
+                    HorizontalOptions="Center"
+                    Source="dotnet_bot.png"
+                    VerticalOptions="Center"
+                    WidthRequest="96" />
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Margin="6"
+                Padding="6,0"
+                Spacing="10">
+
+                <Label
+                    FontSize="14"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span
+                                    FontAttributes="Bold"
+                                    FontSize="20"
+                                    Text="My App About Page" />
+                                <Span Text="&#x0a;" />
+                                <Span Text="ver 22.11.100" />
+                                <Span Text="&#x0a;" />
+                                <Span Text="© 2021-" />
+                                <Span Text="22" />
+                                <Span Text=" AdventureWorks LLC" />
+                                <Span Text="&#x0a;" />
+                                <Span Text="support email: " />
+                                <Span
+                                    Text="info@email.lan"
+                                    TextColor="Blue"
+                                    TextDecorations="Underline" />
+
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+            </StackLayout>
+
+            <BoxView
+                Grid.Row="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Margin="0,6"
+                BackgroundColor="WhiteSmoke"
+                HeightRequest="1" />
+
+            <Button
+                Grid.Row="4"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                Margin="0,12"
+                Padding="12"
+                BackgroundColor="DodgerBlue"
+                CornerRadius="9"
+                HorizontalOptions="Center"
+                Text="Learn More"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="200" />
+
+            <BoxView
+                Grid.Row="5"
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Margin="0"
+                BackgroundColor="WhiteSmoke"
+                HeightRequest="1" />
+
+            <Label
+                Grid.Row="6"
+                Grid.Column="1"
+                Text="Operating System:" />
+
+            <Label
+                Grid.Row="6"
+                Grid.Column="2"
+                HorizontalOptions="End"
+                Text="Android 12.0 " />
+
+            <Label
+                Grid.Row="7"
+                Grid.Column="1"
+                Text="Display Size:" />
+
+            <Label
+                Grid.Row="7"
+                Grid.Column="2"
+                HorizontalOptions="End"
+                Text="6.5" />
+
+            <Label
+                Grid.Row="8"
+                Grid.Column="1"
+                Text="Device Scale Factor:" />
+
+            <Label
+                Grid.Row="8"
+                Grid.Column="2"
+                HorizontalOptions="End"
+                Text="1.85" />
+
+            <Label
+                Grid.Row="9"
+                Grid.Column="1"
+                Text="Device Model:" />
+
+            <Label
+                Grid.Row="9"
+                Grid.Column="2"
+                HorizontalOptions="EndAndExpand"
+                Text="A325G" />
+
+            <Label
+                Grid.Row="10"
+                Grid.Column="1"
+                Text="Device Manufacturer:" />
+
+            <Label
+                Grid.Row="10"
+                Grid.Column="2"
+                HorizontalOptions="EndAndExpand"
+                HorizontalTextAlignment="End"
+                Text="Samsung" />
+
+            <BoxView
+                Grid.Row="11"
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                BackgroundColor="WhiteSmoke"
+                HeightRequest="1"
+                VerticalOptions="Center" />
+
+            <Label
+                Grid.Row="12"
+                Grid.Column="1"
+                Text="Ip Address"
+                VerticalOptions="Center" />
+
+            <Label
+                Grid.Row="12"
+                Grid.Column="2"
+                HorizontalOptions="EndAndExpand"
+                Text="11.12.13.14.15.16"
+                VerticalOptions="Center" />
+
+            <BoxView
+                Grid.Row="13"
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                BackgroundColor="WhiteSmoke"
+                HeightRequest="1"
+                VerticalOptions="Center" />
+
+            <Label
+                Grid.Row="14"
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Margin="12"
+                FontSize="13"
+                Text="Run this demo on Android platform (I used Google Pixel 5 Emulator, Adndroid 12.0, API 31) to see the reported issue.&#x0a;&#x0a;You will note that all items contained in the Grid, including this text, are not centered as they should, particularly the Grid Column items above.&#x0a;&#x0a;If you change this project to net6.0, the issue will go away.&#x0a;&#x0a;Likewise, if you comment out the ScrollView container XAML, the issue will go away.&#x0a;&#x0a;The issue is, therefore, due to ScrollView under net7.0.&#x0a;&#x0a;There are also minor issues on WinUI -- set the Margin and/or Padding on the StackLayout containing the image, and see a layout distortion (you need to re-run as HotReload won't pick up adding XAML changes)." />
+        </Grid>
+
+    </ScrollView>
+
+</ContentPage>
